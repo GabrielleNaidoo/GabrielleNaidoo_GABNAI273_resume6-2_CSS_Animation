@@ -1,0 +1,36 @@
+.logo {
+  height: 250px;
+  width: 250px;
+  border-radius: 10%;
+  margin-top: 200px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes animatedLogo {
+  0% {
+    background-color: grey;
+    blur: 0px;
+  }
+  50% {
+    background-color: white;
+    blur: 5px;
+  }
+  100% {
+    background-color: #0077b7;
+    blur: 15px;
+  }
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+  transition-duration: 1s;
+  background-color: grey;
+  animation-name: animatedLogo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: alternate;
+}
